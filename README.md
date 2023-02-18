@@ -23,6 +23,6 @@
 1. Склонируйте репозиторий: `git clone https://github.com/nearbad/django-stripeAPI`.
 2. Перейдите в директорию проекта: `cd django-stripeAPI`.
 3. Создайте файл `.env` и добавьте свои Stripe API ключи в переменные `STRIPE_PUBLISHABLE_KEY` и `STRIPE_SECRET_KEY`.
-4. Соберите образ Docker: `docker build -t django-stripeapi ..`
+4. Соберите образ Docker: `docker build -t django-stripeapi .`.
 5. Запустите контейнер: `docker run -p 8000:8000 -d django-stripeapi`.
 6. Откройте браузер и перейдите на страницу `http://localhost:8000/item/{item_id}` для покупки Item.
