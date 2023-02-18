@@ -80,3 +80,12 @@ def create_order(request, item_ids):
         success_url=request.build_absolute_uri(reverse('main:index'))
     )
     return JsonResponse({'session_id': session.id})
+
+
+def get_order(request, pk):
+    order = get_object_or_404(Order, pk=pk)
+    context = {
+        'item': order.items,
+        'stripe_public_key': settings.STRIPE_PUBLISHABLE_KEY,
+    }
+    return render(request, 'main/get_item.html', context)
